@@ -15,8 +15,8 @@
         <testng.version>7.12.0</testng.version>
         <gson.version>2.9.0</gson.version>
         <restassured.version>6.0.0</restassured.version>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-surefire-plugin.version>3.5.5</maven-surefire-plugin.version>
@@ -34,7 +34,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <release>22</release>
+                    <release>21</release>
                 </configuration>
             </plugin>
             <plugin>
