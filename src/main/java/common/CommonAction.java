@@ -27,6 +27,11 @@ public class CommonAction {
                         "enableVideo", false
                 ));
 
+                options.addArguments(
+                        "--no-sandbox",
+                        "--disable-dev-shm-usage"
+                );
+
                 driver = new RemoteWebDriver(
                         URI.create("http://selenoid:4444/wd/hub").toURL(),
                         options
@@ -36,7 +41,8 @@ public class CommonAction {
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 
             } catch (Exception e) {
-                throw new RuntimeException("Driver init failed", e);
+                e.printStackTrace();
+                throw new RuntimeException("Failed to create driver", e);
             }
         }
         return driver;
