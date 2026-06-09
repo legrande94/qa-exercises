@@ -3,6 +3,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.9.6-eclipse-temurin-22'
+            args '--network test-network'
         }
     }
 
