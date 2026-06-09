@@ -11,10 +11,14 @@ pipeline {
 
         stage('Build') {
             steps {
+                sh 'java -version'
+                sh 'mvn -version'
+
                 sh '''
-                    export HOME=/tmp
-                    mkdir -p /tmp/.m2
-                    mvn clean test -Dmaven.repo.local=/tmp/.m2
+                   mkdir -p /tmp/.m2
+
+                   mvn clean test \
+                   -Dmaven.repo.local=/tmp/.m2
                 '''
             }
         }
